@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-
+import toast, { Toaster } from 'react-hot-toast';
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -28,11 +28,13 @@ const Login = () => {
     }
     let err;
     if (error) {
-        err = <p>err: {error.message}</p>
-        console.log(error?.message);
+        if (error.message.includes("user-not-found")) {
+            toast.error("User Invalid")
+        }
     }
     return (
         <div className='mt-32'>
+            <Toaster position='top-center'></Toaster>
             <div className='w-1/5 mx-auto'>
                 <form onSubmit={handleLogin}>
                     <h1 className='text-center text-4xl mb-10'>Login</h1>
