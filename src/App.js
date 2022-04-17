@@ -1,9 +1,11 @@
+import Home from "./Home/Home";
 import Navbar from "./Navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
+    <div className="relative">
       <Navbar />
+      <Home />
     </div>
   );
 }
