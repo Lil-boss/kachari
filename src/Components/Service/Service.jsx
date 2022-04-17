@@ -1,9 +1,9 @@
 import React from 'react';
 import ServiceCart from '../ServiceCart/ServiceCart';
-import icon from "../image/icon.png"
+import icon from "../../image/icon.png"
 const Service = () => {
     return (
-        <div className='w-4/5 mx-auto mt-14'>
+        <div id="service" className=' w-4/5 mx-auto mt-14'>
             <div className='flex flex-col justify-center items-center mb-6'>
                 <img className='' src={icon} alt="" />
             </div>

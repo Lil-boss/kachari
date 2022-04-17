@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from "../image/price-table.png"
+import bg from "../../image/price-table.png"
 const ServiceCart = () => {
     return (
         <div className='bg-orange-600 w-4/5 mb-10'>

@@ -1,9 +1,9 @@
 import React from 'react';
-import lawyer from "../image/lawyer.png"
+import lawyer from "../../image/lawyer.png"
 
 const Slider = () => {
     return (
-        <div >
+        <div>
             <div className='w-4/5 mx-auto mt-16'>
                 <div className='grid grid-cols-2 gap-6'>
                     <div className='flex flex-wrap flex-row  items-center'>
