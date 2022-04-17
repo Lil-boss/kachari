@@ -26,15 +26,15 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true })
     }
-    let err;
+
     if (error) {
         if (error.message.includes("user-not-found")) {
-            toast.error("User Invalid")
+            toast.error("User Invalid", { id: "test" })
         }
     }
     return (
         <div className='mt-32'>
-            <Toaster position='top-center'></Toaster>
+            <Toaster position='top-center' />
             <div className='w-1/5 mx-auto'>
                 <form onSubmit={handleLogin}>
                     <h1 className='text-center text-4xl mb-10'>Login</h1>
@@ -49,7 +49,6 @@ const Login = () => {
                     <div className="flex items-start mb-6">
                         <h2>Don't have any <Link to="/register">account?</Link></h2>
                     </div>
-                    {err}
                     <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
                 </form>
 

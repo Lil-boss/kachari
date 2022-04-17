@@ -7,7 +7,8 @@ const Register = () => {
     const navigate = useNavigate();
     const [
         createUserWithEmailAndPassword,
-        user,
+        user, loading,
+        error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
     const [email, setEmail] = useState({ value: "", error: "" })
@@ -51,22 +52,30 @@ const Register = () => {
         if (password.value === "") {
             setPassword({ value: "", error: "Password Required" })
         }
-        if (email.value && password.value) {
-            createUserWithEmailAndPassword(email.value, password.value)
+        if (email.value && password.value && confirmPass.value === password.value) {
+            createUserWithEmailAndPassword(email.value, password.value, { sendEmailVerification: true });
+
         }
 
     }
+
     if (user) {
         navigate("/")
     }
-
-
-
+    if (error) {
+        if (error?.message.includes("email-already-in-use")) {
+            toast.error("User Exits", { id: "test" })
+        }
+    }
+    // let err;
+    // if (error) {
+    //     err = <p>{error.message}</p>
+    // }
     return (
         <div className='w-3/12 mx-auto mt-36'>
-            <Toaster position='top-center' />
+            {/* {err} */}
             <div>
-
+                <Toaster position='top-center' />
                 <form onSubmit={handleRegister}>
                     <h1 className='text-center text-4xl mb-10'>Register</h1>
 
