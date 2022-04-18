@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from '../Slider/Slider';
 import Service from "../Service/Service"
 import ContactUs from '../ContactUs/ContactUs';
+import Footer from '../Footer/Footer';
 const Home = () => {
     return (
         <div>
@@ -30,6 +31,7 @@ const Home = () => {
             </div>
             <Service />
             <ContactUs />
+            <Footer />
         </div>
     );
 };
