@@ -1,8 +1,8 @@
 import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
-import CustomLink from '../CustomLink/CustomLink';
 
 const Navbar = () => {
     const [user] = useAuthState(auth);
@@ -26,27 +26,27 @@ const Navbar = () => {
                         <div className={`${open ? "w-full md:block md:w-auto" : "hidden w-full md:block md:w-auto"}`} id="mobile-menu">
                             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                                 <li>
-                                    <CustomLink to="/">Home</CustomLink>
+                                    <Link to="/">Home</Link>
                                 </li>
 
                                 <li>
-                                    <CustomLink to="/service" >Services</CustomLink>
+                                    <Link to="/service" >Services</Link>
                                 </li>
                                 <li>
-                                    <CustomLink to="/blogs" >Blogs</CustomLink>
+                                    <Link to="/blogs" >Blogs</Link>
                                 </li>
 
                                 <li>
-                                    <CustomLink to="/about">About</CustomLink>
+                                    <Link to="/about">About</Link>
                                 </li>
                                 <li>
-                                    <CustomLink to="/contact" >Contact</CustomLink>
+                                    <Link to="/contact" >Contact</Link>
                                 </li>
                                 {
                                     user ? <li>
-                                        <CustomLink onClick={handleLogOut}>Log Out</CustomLink>
+                                        <Link to="" onClick={handleLogOut}>Log Out</Link>
                                     </li> : <li>
-                                        <CustomLink to="/login" >Login</CustomLink>
+                                        <Link to="/login" >Login</Link>
                                     </li>
                                 }
                             </ul>

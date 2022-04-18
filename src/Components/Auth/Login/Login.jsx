@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import toast, { Toaster } from 'react-hot-toast';
@@ -14,6 +14,7 @@ const Login = () => {
         user, loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [signInWithGoogle, GoogleUser, GoogleLoading, GoogleError] = useSignInWithGoogle(auth);
 
     let from = location.state?.from?.pathname || "/"
     const handleLogin = e => {
@@ -32,6 +33,10 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true })
     }
+    if (GoogleUser) {
+        navigate(from, { replace: true })
+    }
+
     const handleEmail = (emailInput) => {
         setEmail({ value: emailInput, error: "" });
     }
@@ -52,6 +57,13 @@ const Login = () => {
     if (error) {
         if (error.message.includes("network-request-failed")) {
             toast.error("Network failed", { id: "test" })
+        }
+    }
+
+    if (GoogleError) {
+        console.log(GoogleError);
+        if (GoogleError.message.includes("popup-closed-by-user")) {
+            toast.error("Popup Closed", { id: "test" })
         }
     }
     return (
@@ -82,8 +94,9 @@ const Login = () => {
                     </div>
                     <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
                 </form>
-
+                <button onClick={() => signInWithGoogle()} className="mt-8 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Login With Google</button>
             </div>
+
         </div>
     );
 };
