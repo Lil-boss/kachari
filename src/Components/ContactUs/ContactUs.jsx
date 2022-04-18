@@ -5,10 +5,10 @@ const ContactUs = () => {
         <div id='contact'>
             <div className='m-y-10 h-32 bg-stone-700 flex flex-col items-center justify-center'>
                 <h1 className='text-center text-5xl text-white'>Contact Us</h1>
-                <p className='text-white text-sm'>kachari is the best Law Firm. We solve your problems tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam</p>
+                <p className='text-white text-sm sm:p-4 text-center'>kachari is the best Law Firm. We solve your problems tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam</p>
             </div>
-            <div className='w-4/5 mx-auto my-8'>
-                <div className='grid md:grid-cols-2 gap-6'>
+            <div className='w-4/5 mx-auto my-8 '>
+                <div className='grid md:grid-cols-2 gap-6 justify-items-center'>
                     <div className='bg-stone-700 w-8/12'>
                         <div className='py-28 px-16 text-white'>
                             <div className='mb-8'>
@@ -30,12 +30,12 @@ const ContactUs = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div className=''>
+                    <div >
+                        <div className='flex flex-col items-start'>
                             <h2 className='text-3xl mb-8'>Get in Touch</h2>
                             <p className='text-sm '>Terms & Conditions deleniti atque corrupti sdolores et quas molestias cepturi sint eca itate non similique sunt in culpa modi tempora incidunt obtain pain</p>
                         </div>
-                        <div className=''>
+                        <div >
                             <div>
                                 <input className='border-2 ml-2 mt-8 h-12 p-2' type="text" name="" id="" placeholder='Name' />
                                 <input className='border-2 ml-2 mt-8 h-12 p-2' type="text" name="" id="" placeholder='Email' />

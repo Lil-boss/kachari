@@ -33,7 +33,7 @@ const CheckOut = () => {
     const handleSubmitForm = async () => {
         if (name.value && number.value && address.value) {
             Swal.fire(
-                'Thanks for Help!',
+                'Thank you for the booking.!',
                 'You submitted the form',
                 'successfully'
             )
