@@ -7,6 +7,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import ForgetPassword from "./Components/Auth/ForgetPassword/ForgetPassword";
 import RequiredAuth from "./Components/Auth/RequiredAuth/RequiredAuth";
 import About from "./Components/About/About";
+import Blogs from "./Components/Blogs/Blogs";
 function App() {
   return (
     <div className="">
@@ -21,6 +22,7 @@ function App() {
         </RequiredAuth>} />
         <Route path="/forgetPassword" element={<ForgetPassword />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blogs />} />
 
       </Routes>
 
