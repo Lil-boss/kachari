@@ -1,0 +1,37 @@
+[
+    {
+        "id": "625d1bfb4fb0e9349db9e826",
+        "price": 10,
+        "type": "BASIC",
+        "facility": [
+            "Case Evaluation",
+            "Assist in Case Development",
+            "Provide Written Statement",
+            "Obtain Other Expert Witnesses"
+        ]
+    },
+    {
+        "id": "625d1bfb2a1248fc6d2c10a3",
+        "price": 17,
+        "type": "STANDARD",
+        "facility": [
+            "Case Evaluation",
+            "Assist in Case Development",
+            "Provide Written Statement",
+            "Obtain Other Expert Witnesses",
+            "Prepare Demonstrative Evidence"
+        ]
+    },
+    {
+        "id": "625d1bfb5a6cc39ee97aaada",
+        "price": 30,
+        "type": "PREMIUM",
+        "facility": [
+            "Case Evaluation",
+            "Assist in Case Development",
+            "Provide Written Statement",
+            "Testify at a Deposition and / or Trail",
+            "Obtain Other Expert Witnesses"
+        ]
+    }
+]
