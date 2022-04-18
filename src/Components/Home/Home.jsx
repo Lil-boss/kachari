@@ -6,7 +6,7 @@ const Home = () => {
         <div>
             <Slider />
             <div className='w-4/5 mx-auto mt-10 mb-3'>
-                <div className='grid grid-cols-3 gap-5'>
+                <div className='grid md:grid-cols-3 gap-5'>
                     <div className='flex flex-wrap items-center'>
                         <h1 className='text-3xl font-bold'>Why you <br /><span className='text-orange-600'>Choose</span> me?</h1>
                         <p className='text-slate-500'>

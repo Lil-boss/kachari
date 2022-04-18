@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import bg from "../../image/price-table.png"
 const ServiceCart = () => {
     return (
         <div className='bg-orange-600 w-4/5 mb-10'>
             <div className=' py-11 px-16'>
-                <h2 className='font-medium text-5xl -mb-6 block z-10 text-white'>10<sup>$</sup></h2>
+                <h2 className='font-medium text-5xl ml-4 -mb-6 block z-10 text-white'>10<sup>$</sup></h2>
                 <div className='bg-orange-700 h-9 md:w-40 text-right'>
                     <span className='p-4 text-white'>per hour</span>
                 </div>
@@ -22,7 +23,7 @@ const ServiceCart = () => {
                 </div>
             </div>
             <div className=' w-full h-14 flex justify-center items-center cursor-pointer'>
-                <p className='text-center'>CHOOSE NOW</p>
+                <Link to="/checkout" className='text-center'>CHOOSE NOW</Link>
             </div>
         </div >
     );
