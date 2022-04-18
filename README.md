@@ -1,4 +1,13 @@
 # Kachari
 
- [Live Link](https://github.com/facebook/create-react-app).
+ [Live Link](https://kachari.netlify.app/).
+
+ # Build With
+
+ * React
+ * FireBase
+ * Taildwind
+ * React Router
+ 
+
 
