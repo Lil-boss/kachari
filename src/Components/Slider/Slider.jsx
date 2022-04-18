@@ -9,7 +9,7 @@ const Slider = () => {
                     <div className='flex flex-col justify-center'>
                         <h1 className='text-6xl mb-6 text-stone-600'>Mr. Stuart Jackson</h1>
                         <h4 className='text-2xl mb-4 text-stone-800'>Expert Lawyer</h4>
-                        <p className='text-base text-gray-600 mb-6'>Hi, I am expert lawyer. We solve your problems tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
+                        <p className='text-base text-gray-600 mb-6'>Hi, I am expert lawyer. We solve your problems during times of hardship and pain that require some great pleasure. In order to come to the least, any one of us undertakes any physical exercise</p>
                         <button className='h-8 w-44 bg-stone-600 hover:bg-stone-800 text-white border-0'>Make an appointment</button>
                     </div>
                     <div className='ml-6'>

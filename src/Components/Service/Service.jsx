@@ -15,7 +15,7 @@ const Service = () => {
             </div>
             <div className='mb-8'>
                 <h1 className='text-center text-3xl font-semibold mb-4'>Choose your Package</h1>
-                <p className='text-center text-gray-600 w-3/4 mx-auto'>Lawyer boluptatum deleniti atque corrupti quos dolores et quas molestias cepturi sint eca itate non provident, similique sunt in culpa modi tempora incidunt ut labore et dolor am aerat</p>
+                <p className='text-center text-gray-600 w-3/4 mx-auto'>Lawyer soothes and corrupts what pains and annoyances they will receive;</p>
             </div>
             <div className='grid  md:grid-cols-3 gap-6 justify-items-center'>
                 {

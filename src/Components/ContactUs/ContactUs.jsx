@@ -5,7 +5,7 @@ const ContactUs = () => {
         <div className='mt-12'>
             <div className='m-y-10 h-32 bg-stone-700 flex flex-col items-center justify-center'>
                 <h1 className='text-center text-5xl text-white'>Contact Us</h1>
-                <p className='text-white text-sm sm:p-4 text-center'>kachari is the best Law Firm. We solve your problems tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam</p>
+                <p className='text-white text-sm sm:p-4 text-center'>kachari is the best Law Service.solve your problems so that the times are going to get to the point of great fatigue and pain. To come for the smallest things</p>
             </div>
             <div className='w-4/5 mx-auto my-8 '>
                 <div className='grid md:grid-cols-2 gap-6 justify-items-center'>
@@ -33,7 +33,7 @@ const ContactUs = () => {
                     <div >
                         <div className='flex flex-col items-start'>
                             <h2 className='text-3xl mb-8'>Get in Touch</h2>
-                            <p className='text-sm '>Terms & Conditions deleniti atque corrupti sdolores et quas molestias cepturi sint eca itate non similique sunt in culpa modi tempora incidunt obtain pain</p>
+                            <p className='text-sm '>Terms & Conditions soothes and corrupts the pain and the annoyances you will receive</p>
                         </div>
                         <div >
                             <div>
