@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactUs = () => {
     return (
-        <div id='contact'>
+        <div className='mt-12'>
             <div className='m-y-10 h-32 bg-stone-700 flex flex-col items-center justify-center'>
                 <h1 className='text-center text-5xl text-white'>Contact Us</h1>
                 <p className='text-white text-sm sm:p-4 text-center'>kachari is the best Law Firm. We solve your problems tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam</p>

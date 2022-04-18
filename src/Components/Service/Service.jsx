@@ -9,7 +9,7 @@ const Service = () => {
             .then(data => setServices(data));
     }, [])
     return (
-        <div id="service" className=' w-4/5 mx-auto mt-14'>
+        <div className='w-4/5 mx-auto mt-14'>
             <div className='flex flex-col justify-center items-center mb-6'>
                 <img className='' src={icon} alt="" />
             </div>

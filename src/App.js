@@ -9,6 +9,8 @@ import RequiredAuth from "./Components/Auth/RequiredAuth/RequiredAuth";
 import About from "./Components/About/About";
 import Blogs from "./Components/Blogs/Blogs";
 import NotFound from "./Components/NotFound/NotFound";
+import ContactUs from "./Components/ContactUs/ContactUs";
+import Service from "./Components/Service/Service";
 function App() {
   return (
     <div className="">
@@ -22,6 +24,8 @@ function App() {
         </RequiredAuth>} />
         <Route path="/forgetPassword" element={<ForgetPassword />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/service" element={<Service />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

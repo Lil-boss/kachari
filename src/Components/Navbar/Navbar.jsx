@@ -1,8 +1,8 @@
 import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import CustomLink from '../CustomLink/CustomLink';
 
 const Navbar = () => {
     const [user] = useAuthState(auth);
@@ -26,27 +26,27 @@ const Navbar = () => {
                         <div className={`${open ? "w-full md:block md:w-auto" : "hidden w-full md:block md:w-auto"}`} id="mobile-menu">
                             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                                 <li>
-                                    <a href="/" className="block py-2 pr-4 pl-3 text-gray-700 bg-blue-700 rounded md:bg-transparent md:hover:text-stone-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                                    <CustomLink to="/">Home</CustomLink>
                                 </li>
 
                                 <li>
-                                    <a href="#service" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-stone-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" >Services</a>
+                                    <CustomLink to="/service" >Services</CustomLink>
                                 </li>
                                 <li>
-                                    <Link to="/blogs" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-stone-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blogs</Link>
+                                    <CustomLink to="/blogs" >Blogs</CustomLink>
                                 </li>
 
                                 <li>
-                                    <Link to="/about" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-stone-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Link>
+                                    <CustomLink to="/about">About</CustomLink>
                                 </li>
                                 <li>
-                                    <a href="#contact" className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-stone-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                                    <CustomLink to="/contact" >Contact</CustomLink>
                                 </li>
                                 {
                                     user ? <li>
-                                        <p onClick={handleLogOut} className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-stone-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer">Log Out</p>
+                                        <CustomLink onClick={handleLogOut}>Log Out</CustomLink>
                                     </li> : <li>
-                                        <Link to="/login" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-stone-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Login</Link>
+                                        <CustomLink to="/login" >Login</CustomLink>
                                     </li>
                                 }
                             </ul>
