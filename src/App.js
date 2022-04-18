@@ -24,9 +24,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="*" element={<NotFound />} />
-
       </Routes>
-
     </div>
   );
 }

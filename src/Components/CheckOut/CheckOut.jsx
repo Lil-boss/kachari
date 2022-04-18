@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const CheckOut = () => {
     const [name, setName] = useState({ value: "", error: "" })
     const [number, setNumber] = useState({ value: "", error: "" })
     const [address, setAddress] = useState({ value: "", error: "" })
+    const navigate = useNavigate();
     const handleName = (nameInput) => {
         if (nameInput) {
             setName({ value: nameInput, error: "" })
@@ -30,13 +32,16 @@ const CheckOut = () => {
 
     }
 
-    const handleSubmitForm = async () => {
+    const handleSubmitForm = async (e) => {
+        e.preventDefault();
         if (name.value && number.value && address.value) {
             Swal.fire(
                 'Thank you for the booking.!',
                 'You submitted the form',
                 'successfully'
             )
+            navigate("/")
+
         } else {
             Swal.fire({
                 icon: 'error',

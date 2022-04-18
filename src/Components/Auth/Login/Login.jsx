@@ -30,15 +30,18 @@ const Login = () => {
     }
 
     if (user) {
-
         navigate(from, { replace: true })
-
     }
     const handleEmail = (emailInput) => {
         setEmail({ value: emailInput, error: "" });
     }
     const handlePassword = (PassInput) => {
         setPassword({ value: PassInput, error: "" });
+    }
+    if (error) {
+        if (error.message.includes("wrong-password")) {
+            toast.error("Password Not Matched", { id: "test" })
+        }
     }
 
     if (error) {
@@ -61,10 +64,16 @@ const Login = () => {
                         <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
                         <input onBlur={e => handleEmail(e.target.value)} name="email" type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" />
                     </div>
+                    {
+                        email?.error && <p className='text-xs text-red-600 -mt-5'>{email.error}</p>
+                    }
                     <div className="mb-6">
                         <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label>
                         <input onBlur={e => handlePassword(e.target.value)} type="password" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" />
                     </div>
+                    {
+                        password?.error && <p className='text-xs text-red-600 -mt-5'>{password.error}</p>
+                    }
                     <div className="flex items-start mb-6">
                         <h2>Don't have any <Link className='text-blue-500' to="/register">account?</Link></h2>
                     </div>

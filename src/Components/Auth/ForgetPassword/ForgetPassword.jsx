@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
-import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import auth from '../../../firebase.init';
 
 const ForgetPassword = () => {
@@ -16,18 +16,24 @@ const ForgetPassword = () => {
 
 
     const handleForgetPassword = async (e) => {
+        debugger
         e.preventDefault();
-        if (email.value) {
-            await sendPasswordResetEmail(email.value);
-            toast.success("Mail sent");
+        await sendPasswordResetEmail(email.value);
+        toast.success("Mail sent");
+    }
+    if (error) {
+        if (error.message.includes("user-not-found")) {
+            toast.error("User not Exits", { id: "test" })
         }
     }
-    if (sending) {
-        toast.success("sending....");
-    }
+
+
+
+
     return (
         <div>
             <div className='w-1/5 mx-auto'>
+                <Toaster position='top-center' />
                 <form onSubmit={handleForgetPassword}>
                     <h1 className='text-center text-4xl mb-10'>Login</h1>
                     <div className="mb-6">
@@ -36,7 +42,6 @@ const ForgetPassword = () => {
                     </div>
                     <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sent</button>
                 </form>
-
             </div>
         </div>
     );
